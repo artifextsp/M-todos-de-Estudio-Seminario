@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seminario-Taller: Métodos de Estudio Efectivos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header h1 {
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .header .subtitle {
+            color: #e74c3c;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .instructor {
+            background: #3498db;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .marco-teorico {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .marco-teorico h2 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .objetivos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .objetivo {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .objetivo:hover {
+            transform: translateY(-5px);
+        }
+        
+        .objetivo-icon {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .objetivo h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .info-practica {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .fechas-horarios {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .fecha-box {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .precio {
+            background: linear-gradient(45deg, #10ac84, #00d2d3);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 30px 0;
+            font-size: 1.5em;
+            font-weight: bold;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        .inscripcion {
+            background: #f39c12;
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 30px 0;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        .nequi {
+            font-size: 2em;
+            font-weight: bold;
+            color: #2c3e50;
+            background: white;
+            padding: 10px;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+        
+        .frase-final {
+            background: linear-gradient(45deg, #8e44ad, #3742fa);
+            color: white;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            font-size: 1.3em;
+            font-style: italic;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            margin-top: 30px;
+        }
+        
+        .referencias {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+        
+        .referencias h4 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        
+        .referencias p {
+            margin-bottom: 10px;
+            text-align: justify;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .objetivos {
+                grid-template-columns: 1fr;
+            }
+            
+            .fechas-horarios {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎓 SEMINARIO-TALLER</h1>
+            <div class="subtitle">MÉTODOS DE ESTUDIO EFECTIVOS</div>
+            <p><strong>Para estudiantes de 4° grado en adelante</strong></p>
+            <div class="instructor">
+                👨‍🏫 <strong>Instructor:</strong> Hansel Peña Díaz<br>
+                🎯 Especialista en Robótica, STEAM y Habilidades del Pensamiento
+            </div>
+        </div>
+
+        <div class="marco-teorico">
+            <h2>🧠 ¿Por qué son importantes los Métodos de Estudio?</h2>
+            <p>La investigación científica en neurociencia y psicología educativa ha demostrado que <strong>no basta con estudiar más tiempo, sino estudiar de manera más inteligente</strong>. Según la Teoría del Procesamiento de la Información de Atkinson y Shiffrin (1968), nuestro cerebro procesa, almacena y recupera información de manera más eficiente cuando utilizamos estrategias específicas.</p>
+            
+            <p>David Ausubel (1963) estableció que <strong>"el factor más importante que influye en el aprendizaje es lo que el alumno ya sabe"</strong>, y que las técnicas de organización visual y conexión de conocimientos previos potencian exponencialmente la retención. Por su parte, Hermann Ebbinghaus (1885) demostró a través de su famosa "Curva del Olvido" que sin técnicas de repaso efectivo, olvidamos el 50% de la información nueva en solo 20 minutos.</p>
+            
+            <p>Los estudios de Dunlosky et al. (2013) en Psychological Science identificaron que técnicas como la <strong>práctica distribuida, las pruebas de práctica y la elaboración interrogativa</strong> son las estrategias de aprendizaje más efectivas, superando métodos tradicionales como el resaltado o el repaso simple.</p>
+            
+            <p>En la era digital, el trabajo de Cal Newport (2016) en "Deep Work" y los estudios de Adam Gazzaley sobre atención, confirman que <strong>los métodos de estudio estructurados y la gestión de la distracción son más críticos que nunca</strong> para el éxito académico.</p>
+        </div>
+
+        <div class="objetivos">
+            <h2 style="text-align: center; color: #2c3e50; margin-bottom: 30px; font-size: 2em;">📚 Módulos que Abordaremos</h2>
+            <div class="objetivo">
+                <div class="objetivo-icon">🎯</div>
+                <h3>1. Planificación Estratégica</h3>
+                <p>Establecimiento de metas académicas SMART y estrategias para el año escolar completo.</p>
+            </div>
+            
+            <div class="objetivo">
+                <div class="objetivo-icon">⏰</div>
+                <h3>2. Gestión del Tiempo</h3>
+                <p>Técnicas de organización temporal y priorización efectiva de actividades académicas.</p>
+            </div>
+            
+            <div class="objetivo">
+                <div class="objetivo-icon">🧠</div>
+                <h3>3. Estrategias de Aprendizaje</h3>
+                <p>Métodos científicamente probados para optimizar la retención y comprensión.</p>
+            </div>
+            
+            <div class="objetivo">
+                <div class="objetivo-icon">✍️</div>
+                <h3>4. Toma de Apuntes Efectiva</h3>
+                <p>Técnicas Cornell, mapping y sistemas de codificación para máxima eficiencia.</p>
+            </div>
+            
+            <div class="objetivo">
+                <div class="objetivo-icon">🗺️</div>
+                <h3>5. Organizadores Visuales</h3>
+                <p>Mapas mentales, conceptuales, diagramas y técnicas de brainstorming creativo.</p>
+            </div>
+            
+            <div class="objetivo">
+                <div class="objetivo-icon">🧩</div>
+                <h3>6. Técnicas de Memorización</h3>
+                <p>Nemotecnias, palacio de la memoria y sistemas de asociación avanzados.</p>
+            </div>
+            
+            <div class="objetivo">
+                <div class="objetivo-icon">📝</div>
+                <h3>7. Preparación de Evaluaciones</h3>
+                <p>Estrategias específicas para diferentes tipos de exámenes y evaluaciones.</p>
+            </div>
+            
+            <div class="objetivo">
+                <div class="objetivo-icon">🔍</div>
+                <h3>8. Métodos de Investigación</h3>
+                <p>Técnicas clásicas y con Inteligencia Artificial para búsqueda y análisis de información.</p>
+            </div>
+            
+            <div class="objetivo">
+                <div class="objetivo-icon">📊</div>
+                <h3>9. Presentación con Normas APA</h3>
+                <p>Estructura profesional de informes y trabajos académicos según estándares internacionales.</p>
+            </div>
+            
+            <div class="objetivo">
+                <div class="objetivo-icon">🧘</div>
+                <h3>10. Manejo del Estrés</h3>
+                <p>Técnicas de meditación y regulación del sistema nervioso en situaciones de presión académica.</p>
+            </div>
+        </div>
+
+        <div class="info-practica">
+            <h2>📅 Información del Seminario</h2>
+            <div class="fechas-horarios">
+                <div class="fecha-box">
+                    <div>📅 FECHA</div>
+                    <div>1, 2 y 3 de Julio 2025</div>
+                </div>
+                <div class="fecha-box">
+                    <div>🕐 HORARIO</div>
+                    <div>7:30 AM - 10:30 AM</div>
+                    <div>(Break de 15 min incluido)</div>
+                </div>
+                <div class="fecha-box">
+                    <div>📚 MODALIDAD</div>
+                    <div>Teórico-Práctico</div>
+                    <div>9 horas académicas</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="precio">
+            💰 INVERSIÓN: $100.000 por estudiante
+        </div>
+
+        <div class="inscripcion">
+            <h2>🚀 ¡INSCRIBE A TU HIJO/A AHORA!</h2>
+            <p><strong>Para asegurar el cupo, envía la consignación a:</strong></p>
+            <div class="nequi">📱 NEQUI: 3143090748</div>
+            <p><strong>📋 Incluir en el mensaje:</strong></p>
+            <ul style="text-align: left; display: inline-block; margin: 15px 0;">
+                <li>✅ Nombre completo del estudiante</li>
+                <li>✅ Grado que termina actualmente</li>
+                <li>✅ Grado al que ingresa</li>
+                <li>✅ Teléfono de contacto</li>
+            </ul>
+        </div>
+
+        <div class="referencias">
+            <h4>📚 Referencias Científicas</h4>
+            <p><strong>Atkinson, R. C., & Shiffrin, R. M. (1968).</strong> Human memory: A proposed system and its control processes. <em>Psychology of Learning and Motivation, 2</em>, 89-195.</p>
+            <p><strong>Ausubel, D. P. (1963).</strong> The psychology of meaningful verbal learning. <em>New York: Grune & Stratton</em>.</p>
+            <p><strong>Dunlosky, J., Rawson, K. A., Marsh, E. J., Nathan, M. J., & Willingham, D. T. (2013).</strong> Improving students' learning with effective learning techniques. <em>Psychological Science in the Public Interest, 14</em>(1), 4-58.</p>
+            <p><strong>Ebbinghaus, H. (1885).</strong> Memory: A contribution to experimental psychology. <em>Teachers College, Columbia University</em>.</p>
+            <p><strong>Newport, C. (2016).</strong> Deep Work: Rules for Focused Success in a Distracted World. <em>Grand Central Publishing</em>.</p>
+        </div>
+
+        <div class="frase-final">
+            ✨ "No se trata de ser el más inteligente de la clase, sino de desarrollar la inteligencia para aprender de manera efectiva. Los métodos de estudio son las herramientas que transforman el esfuerzo en éxito y el tiempo en conocimiento duradero." ✨
+        </div>
+    </div>
+</body>
+</html>
